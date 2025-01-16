@@ -29,7 +29,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request -> request
-                .requestMatchers("/login", "/register","/","/refresh-token").permitAll()
+                .requestMatchers("/api/v1/users/login", "/api/v1/users/register","/","/api/v1/users/refresh-token").permitAll()
                 .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
