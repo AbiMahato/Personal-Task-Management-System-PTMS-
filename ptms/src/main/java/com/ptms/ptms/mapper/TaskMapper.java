@@ -4,6 +4,7 @@ import com.ptms.ptms.dto.TaskDto;
 import com.ptms.ptms.model.Task;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
